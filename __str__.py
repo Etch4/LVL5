@@ -4,6 +4,7 @@ Oscilloscope = EEquip_00
 EEquip_00 = "Siglent_00"
 print(EEquip_00)
 
+#######################################
 class EEquip_01:
     def __init__(self, brand):
         self.brand = brand
@@ -12,7 +13,7 @@ Oscilloscope = EEquip_01("Siglent_01")
 print(Oscilloscope)
 print(Oscilloscope.brand)
 
-########################################
+#######################################
 
 class EEquip_02:
     def __init__(self, brand):
@@ -23,7 +24,7 @@ class EEquip_02:
 Oscilloscope = EEquip_02("Siglent_02")
 print(Oscilloscope)
 
-###########################################
+#######################################
 
 class Rectangle:
   def __init__(self, width, height):
