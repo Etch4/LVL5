@@ -1,7 +1,7 @@
 def addthumpsup(func):
-  def myinner():
+  def inner():
     return func() + " \U0001F44D"
-  return myinner
+  return inner
 
 class EEquip_00:
     pass
@@ -9,8 +9,8 @@ class EEquip_00:
 Oscilloscope = EEquip_00
 @addthumpsup
 def dummy():
-    EEquip_00 = "Siglent(SDS2104)_00"
-    return EEquip_00
+    Oscilloscope = "Siglent(SDS2104)_00"
+    return Oscilloscope
 
 print(dummy())
 
