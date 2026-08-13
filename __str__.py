@@ -36,8 +36,5 @@ class Rectangle:
     temp = self.width * self.height
     return f"{temp}"
 
-  def area(self):
-    __str__(self)
-
 r1 = Rectangle(5, 3)
 print(r1)
