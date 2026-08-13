@@ -1,9 +1,16 @@
+class EEquip_00:
+   pass
+Oscilloscope = EEquip_00
+EEquip_00 = "Siglent_00"
+print(EEquip_00)
+
 class EEquip_01:
     def __init__(self, brand):
         self.brand = brand
 
-Oscilloscope = EEquip_01("Siglent")
+Oscilloscope = EEquip_01("Siglent_01")
 print(Oscilloscope)
+print(Oscilloscope.brand)
 
 ########################################
 
@@ -13,7 +20,7 @@ class EEquip_02:
     def __str__(self):
         return f"{self.brand}"
     
-Oscilloscope = EEquip_02("Siglent")
+Oscilloscope = EEquip_02("Siglent_02")
 print(Oscilloscope)
 
 ###########################################
