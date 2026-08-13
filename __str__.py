@@ -5,6 +5,7 @@ EEquip_00 = "Siglent_00"
 print(EEquip_00)
 
 #######################################
+
 class EEquip_01:
     def __init__(self, brand):
         self.brand = brand
