@@ -1,8 +1,18 @@
+def addgreeting(func):
+  def myinner():
+    return func() + " \U0001F44D"
+  return myinner
+
 class EEquip_00:
     pass
+
 Oscilloscope = EEquip_00
-EEquip_00 = "Siglent(SDS2104)_00"
-print(EEquip_00)
+@addgreeting
+def dummy():
+    EEquip_00 = "Siglent(SDS2104)_00"
+    return EEquip_00
+
+print(dummy())
 
 #######################################
 
@@ -10,9 +20,12 @@ class EEquip_01:
     def __init__(self, brand):
         self.brand = brand
 
-Oscilloscope = EEquip_01("Siglent(SDS2104)_01")
-print(Oscilloscope)
-print(Oscilloscope.brand)
+@addgreeting
+def dummy():
+    Oscilloscope = EEquip_01("Siglent(SDS2104)_01")
+    return Oscilloscope.brand
+
+print(dummy())
 
 #######################################
 
@@ -21,9 +34,12 @@ class EEquip_02:
         self.brand = brand
     def __str__(self):
         return f"{self.brand}"
-    
-Oscilloscope = EEquip_02("Siglent(SDS2104)_02")
-print(Oscilloscope)
+
+@addgreeting
+def dummy():
+    Oscilloscope = EEquip_02("Siglent(SDS2104)_02")
+    return Oscilloscope.brand
+print(dummy())
 
 #######################################
 
@@ -31,10 +47,11 @@ class Rectangle:
   def __init__(self, width, height):
     self.width = width
     self.height = height
-
-  def __str__(self):
-    temp = self.width * self.height
-    return f"{temp}"
-
-r1 = Rectangle(5, 3)
-print(r1)
+  def area(self):
+     return self.width * self.height  
+  
+@addgreeting
+def dummy():
+    r1 = Rectangle(5, 3)
+    return f"{r1.area()}"
+print(dummy())
