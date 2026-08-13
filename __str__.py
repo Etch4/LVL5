@@ -1,13 +1,15 @@
-def addthumpsup(func):
+def addthumbsup(func):
   def inner():
     return func() + " \U0001F44D"
   return inner
+
+#######################################
 
 class EEquip_00:
     pass
 
 Oscilloscope = EEquip_00
-@addthumpsup
+@addthumbsup
 def dummy():
     Oscilloscope = "Siglent(SDS2104)_00"
     return Oscilloscope
@@ -20,7 +22,7 @@ class EEquip_01:
     def __init__(self, brand):
         self.brand = brand
 
-@addthumpsup
+@addthumbsup
 def dummy():
     Oscilloscope = EEquip_01("Siglent(SDS2104)_01")
     return Oscilloscope.brand
@@ -35,7 +37,7 @@ class EEquip_02:
     def __str__(self):
         return f"{self.brand}"
 
-@addthumpsup
+@addthumbsup
 def dummy():
     Oscilloscope = EEquip_02("Siglent(SDS2104)_02")
     return Oscilloscope.brand
@@ -50,7 +52,7 @@ class Rectangle:
   def area(self):
      return self.width * self.height  
   
-@addthumpsup
+@addthumbsup
 def dummy():
     r1 = Rectangle(5, 3)
     return f"{r1.area()}"
