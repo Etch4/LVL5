@@ -31,20 +31,6 @@ print(dummy())
 
 #######################################
 
-class EEquip_02:
-    def __init__(self, brand):
-        self.brand = brand
-    def __str__(self):
-        return f"{self.brand}"
-
-@addthumbsup
-def dummy():
-    Oscilloscope = EEquip_02("Siglent(SDS2104)_02")
-    return Oscilloscope.brand
-print(dummy())
-
-#######################################
-
 class Rectangle:
   def __init__(self, width, height):
     self.width = width
